@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Início - Semana do Meio Ambiente</title>
+</h:head>
+<h:body style="background: url('../img/logoifma.png')">
+	<div style="background-color: #FFFFFF">
+		<h:panelGrid columns="3" cellpadding="5">
+
+			<img
+				src="#{facesContext.externalContext.request.contextPath}/img/Logo.gif"
+				height="200px" width="900px" />
+			<p:outputLabel value="      " />
+
+			<img
+				src="#{facesContext.externalContext.request.contextPath}/img/logoifma.png"
+				height="110px" width="400" />
+		</h:panelGrid>
+	</div>
+	<h:form>
+
+		<p:menubar style="background-color: #2E8B57">
+
+
+			<f:facet name="options">
+				<p:outputLabel value="Usuário logado: " />
+				<p:outputLabel value="#{InicioBean.alunologado.nome}   " />
+
+				<p:commandButton ajax="false" action="#{InicioBean.logout}"
+					value="Logout" icon="ui-icon-extlink"
+					style="background-color: #3CB371" />
+			</f:facet>
+		</p:menubar>
+
+
+		<div class="ui-g">
+
+
+			<div class="ui-g-12">
+				<div align="center"
+					style="background-image: url('img\logoifma.png')">
+					<p:imageSwitch effect="zoom">
+						<ui:repeat value="#{InicioBean.images}" var="image">
+							<img
+								src="#{facesContext.externalContext.request.contextPath}/img/imgevento/#{image}"
+								width="900px" height="400px"></img>
+
+						</ui:repeat>
+					</p:imageSwitch>
+				</div>
+
+				<p:messages id="messages" showDetail="true" closable="true">
+
+				</p:messages>
+			</div>
+			<div class="ui-g-12 ui-g-nopad">
+
+				<div>
+					<p:panel header="Minicursos/Oficinas"
+						style="background-color: #3CB371">
+						<p:accordionPanel value="#{InicioBean.minicursos}" var="minicurso"
+							style="background-color: #3CB371">
+
+							<p:tab title="#{minicurso.tema}"
+								style="background-color: #3CB371">
+								<h:panelGrid columns="2" cellpadding="5">
+									<img
+										src="#{facesContext.externalContext.request.contextPath}/img/#{minicurso.palestrante.foto}"
+										width="100px" />
+
+									<h:outputText value="#{minicurso.palestrante.nome}" />
+									<p:commandLink value="#{minicurso.palestrante.curriculo}" />
+
+								</h:panelGrid>
+								<h:outputText value="#{minicurso.palestrante.descricao}" />
+								<p:separator />
+								<h:outputText value="#{minicurso.descricao}" />
+								<p:separator />
+								<h:panelGrid columns="2" cellpadding="5">
+
+
+									<h:outputText value="#{minicurso.data}" />
+									<h:outputText value="#{minicurso.horario}" />
+									<h:outputText value="#{minicurso.qntVagas} vagas disponíveis" />
+								</h:panelGrid>
+
+								<div align="center">
+									<p:commandButton value="Selecionar Minicurso" immediate="true"
+										style="background-color: #3CB371" ajax="false"
+										update="selecioinado2">
+										<f:setPropertyActionListener
+											target="#{InicioBean.minicursoSelecionado}"
+											value="#{minicurso}" />
+									</p:commandButton>
+								</div>
+
+
+							</p:tab>
+
+						</p:accordionPanel>
+					</p:panel>
+					<p:separator />
+					<p:panel id="selecionado2"
+						rendered="#{InicioBean.isMinicursoSelecionado}">
+						<p:outputLabel
+							value="Minicurso Selecionado: #{InicioBean.minicursoSelecionado.tema}" />
+						<p:commandButton value="Excluir" icon="ui-icon-close" ajax="false"
+							update="selecionado2"
+							action="#{InicioBean.excluirMinicursoSelecionado}" />
+					</p:panel>
+					<div align="center">
+						<p:commandButton value="Salvar Inscrição"
+							style="margin-top:10px;background-color: #3CB371"
+							action="#{InicioBean.salvarInscricao}" ajax="false" />
+					</div>
+					<p:separator style="margin-top:10px" />
+				</div>
+
+			</div>
+		</div>
+		<div class="ui-g-12">
+			<div align="center">
+				<p:panel style="background-color: #3CB371; height:150px">
+					<p:outputLabel style="font-size:12px; color: #FFFFFF"
+						value="Desenvolvido pela turma de Informática 2016.2 - Subsequente" />
+					<br />
+					<p:outputLabel style="font-size:12px; color: #FFFFFF"
+						value="Carleane Sousa" />
+					<br />
+					<p:outputLabel style="font-size:12px; color: #FFFFFF"
+						value="Eliane Silva" />
+					<br />
+					<p:outputLabel style="font-size:12px; color: #FFFFFF"
+						value="Janiele Matos" />
+					<br />
+					<p:outputLabel style="font-size:12px; color: #FFFFFF"
+						value="Jaqueline Barros" />
+					<br />
+					<p:outputLabel style="font-size:12px; color: #FFFFFF"
+						value="Rafael Oliveira" />
+				</p:panel>
+			</div>
+		</div>
+
+
+
+	</h:form>
+
+</h:body>
+</html>
