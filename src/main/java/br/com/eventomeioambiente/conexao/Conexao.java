@@ -22,7 +22,7 @@ public class Conexao {
 
 	public Connection conectar() {
 
-		String endereco = "jdbc:postgresql://localhost:5432/BDEventoMeioAmbiente";
+		String endereco = "jdbc:postgres://xalmripwnslzof:0696121188bd798e39bb2fdad8f3a51f81fb91a6044bd3b14918db57bbc6a393@ec2-75-101-142-91.compute-1.amazonaws.com:5432/d9ar29pvfs8jli";
 		String usuario = "postgres";
 		String senha = "admin";
 
