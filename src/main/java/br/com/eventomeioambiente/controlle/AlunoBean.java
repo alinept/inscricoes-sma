@@ -16,7 +16,10 @@ import br.com.eventomeioambiente.modelo.Aluno;
 @RequestScoped
 @ManagedBean (name = "alunoBean")
 public class AlunoBean implements Serializable{
-
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	private static final long serialVersionUID = 1L;
 	
 	AlunoDao alunoDao;

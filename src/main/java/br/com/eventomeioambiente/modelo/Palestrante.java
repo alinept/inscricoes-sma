@@ -8,6 +8,10 @@ import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.StreamedContent;
 
 public class Palestrante implements Serializable {
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	private static final long serialVersionUID = 1L;
 	private int idPalestrante;
 	private String nome;

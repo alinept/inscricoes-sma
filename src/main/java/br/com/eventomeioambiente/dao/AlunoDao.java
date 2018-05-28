@@ -10,7 +10,10 @@ import br.com.eventomeioambiente.modelo.Aluno;
 
 
 public class AlunoDao {
- 
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	public int atualizaQrcode(Aluno aluno) throws SQLException{
 		Conexao c = new Conexao();
 		Connection cc = c.conectar();

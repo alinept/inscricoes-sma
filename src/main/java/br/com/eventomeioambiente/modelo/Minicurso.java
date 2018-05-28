@@ -7,6 +7,10 @@ import java.util.Date;
 import java.util.SimpleTimeZone;
 
 public class Minicurso implements Serializable {
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	private static final long serialVersionUID = 1L;
 
 	private int idPalestra;

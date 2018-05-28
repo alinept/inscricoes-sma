@@ -12,7 +12,10 @@ import br.com.eventomeioambiente.modelo.Minicurso;
 
 
 public class MinicursoDao {
-	
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	public List<Minicurso> buscarTodosMinicursos() throws SQLException{
 		
 		Conexao c = new Conexao();

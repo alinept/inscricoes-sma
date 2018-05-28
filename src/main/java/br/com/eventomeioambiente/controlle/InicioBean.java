@@ -24,7 +24,10 @@ import br.com.eventomeioambiente.modelo.Minicurso;
 @SessionScoped
 @ManagedBean(name = "InicioBean")
 public class InicioBean implements Serializable {
-
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	private static final long serialVersionUID = 1L;
 
 	Aluno alunologado;

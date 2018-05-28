@@ -9,7 +9,10 @@ import br.com.eventomeioambiente.conexao.Conexao;
 import br.com.eventomeioambiente.modelo.Palestrante;
 
 public class PalestranteDao {
-
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	public int inserirPalestrante(Palestrante palestrante) throws SQLException{
 		Conexao c = new Conexao();
 		Connection cc = c.conectar();

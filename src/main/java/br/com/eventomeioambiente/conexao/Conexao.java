@@ -12,7 +12,10 @@ import java.sql.Statement;
 import javax.swing.JFileChooser;
 
 public class Conexao {
-
+	/**
+	 * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
+	 */
+	private String encoding;
 	private Connection con = null;
 
 	public Statement stmt;
