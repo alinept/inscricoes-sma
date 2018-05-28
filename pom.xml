@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.gov.ma.semfaz</groupId>
-	<artifactId>SisRPT</artifactId>
+	<groupId>br.com.eventomeioambiente</groupId>
+	<artifactId>inscricoes-sma</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SisRPT Maven Webapp</name>
+	<name>Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<build>
-		<finalName>SisRPT</finalName>
+		<finalName>inscricoes-sma</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -37,11 +37,7 @@
 		</dependency>
 
 <!-- http://mvnrepository.com/artifact/postgresql/postgresql -->
-		<dependency>
-		    <groupId>postgresql</groupId>
-		    <artifactId>postgresql</artifactId>
-		    <version>9.0-801.jdbc4</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -56,72 +52,7 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.5.5-Final</version>
-		</dependency>
-
-		<dependency>
-			<groupId>javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.12.1.GA</version>
-		</dependency>
-
-		<dependency>
-			<groupId>c3p0</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.0</version>
-		</dependency>
-
-		
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.5.10</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>1.5.10</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.5.10</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
-			<exclusions>
-				<exclusion>
-					<groupId>javax.mail</groupId>
-					<artifactId>mail</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>javax.jms</groupId>
-					<artifactId>jms</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jdmk</groupId>
-					<artifactId>jmxtools</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jmx</groupId>
-					<artifactId>jmxri</artifactId>
-				</exclusion>
-			</exclusions>
-			<scope>runtime</scope>
-		</dependency>
-		
+				
 		<dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
@@ -130,20 +61,6 @@
         
         
         <!-- ######## IReport ##########  -->
-         <dependency> 
-            <groupId>net.sf.jasperreports</groupId> 
-            <artifactId>jasperreports</artifactId> 
-            <version>5.0.1</version> 
-        </dependency>
-        
-        <dependency>
-
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
-            <version>3.2.1</version>
-
-        </dependency>
-        
-       
+               
 	</dependencies>
 </project>
